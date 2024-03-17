@@ -2,7 +2,7 @@
 
 Implementation d'une page web basée sur le design realisé par **Kurnia Majid** sur Dribble
 
-Le but est d'apprendre **tailwindcc**
+Le but est d'apprendre **tailwindcss**
 
 Liens:
 Profil: https://dribbble.com/Pickolab
