@@ -6,10 +6,10 @@
     <title>Homes for sale</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
+<body class="bg-slate-100">
 
     <header class="flex flex-wrap items-center border-b-2">
-        <div id="logo" class="bg-red-400 lg:border-r-4 w-full lg:w-2/12 flex items-center space-x-1 p-4 border-b">
+        <div id="logo" class="lg:border-r w-full lg:w-2/12 flex items-center space-x-1 p-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
             </svg>
@@ -17,7 +17,7 @@
               
         </div>
 
-        <div id="searchbar" class="flex flex-wrap w-full lg:w-10/12 items-center p-4 justify-between bg-emerald-200 border-b">
+        <div id="searchbar" class="flex flex-wrap w-full lg:w-10/12 items-center p-4 justify-between ">
             <div class="w-full md:w-8/12 mb-4 md:mb-0 lg:w-4/12 flex items-center">
                 <input type="search" name="search" id="" class="w-full relative px-8 py-4 border-2  rounded-full outline-slate-400" placeholder="Search location, coordinate, country...">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute m-2">
@@ -32,7 +32,7 @@
 
     <!-- Filters & Types -->
     <div id="filters" class="flex flex-wrap border-b-2">
-        <div class="filter-btn flex justify-between items-center w-full lg:w-2/12 bg-yellow-200 lg:border-r-4 p-4">
+        <div class="filter-btn flex justify-between items-center w-full lg:w-2/12 lg:border-r-2 p-4">
             <div class="flex">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
@@ -46,7 +46,7 @@
               
         </div>
         <!-- House Types -->
-        <div id="types" class="w-full lg:w-10/12 bg-violet-300 p-4 flex items-center flex-wrap space-x-2 space-y-2">
+        <div id="types" class="w-full lg:w-10/12 p-4 flex items-center flex-wrap space-x-2 space-y-2">
 
             <button type="button" class="flex justify-around bg-gray-800 text-slate-200 border border-gray-800 px-4 py-2 rounded-full space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -86,16 +86,174 @@
 
     <!-- Wraper -->
     <div class="wraper grid grid-cols-12">
-        <div class="sidebar hidden md:block bg-amber-400 col-span-2 p-4 border-r-4">
-            <div class="applied-filter bg-indigo-400">Applied filter</div>
-            <div class="developers bg-sky-500">Developers</div>
-            <div class="home-status bg-pink-400">Home status</div>
-            <div class="buget bg-red-400">Buget</div>
-            <div class="home-type bg-fuchsia-400">Home type</div>
-            <div class="bedrooms bg-rose-500">Bedrooms</div>
+        <div class="sidebar hidden md:block  col-span-2  border-r-2">
+            <!-- Applied Filter -->
+            <div class="applied-filter border-b-2 p-4">
+                <div class="labels flex justify-between">
+                    <a href="#" class="text-black text-base">Applied Filter</a>
+                    <a href="#" class="text-neutral-500">Clear All</a>
+                </div>
+                <div class="btn-filters flex justify-between items-center flex-wrap">
+                    <button type="button" class="flex justify-around space-x-1 items-center mt-4 bg-gray-800 px-4 py-2 text-slate-200 rounded-full">
+                        <span>CBRE</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>                          
+                    </button>
+                    <button type="button" class="flex justify-around space-x-1 items-center mt-4 bg-gray-800 px-4 py-2 text-slate-200 rounded-full">
+                        <span>For sale</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>                          
+                    </button>
+                </div>
+            </div>
+            <!-- End Applied Filter -->
+
+            <!-- End Developers -->
+            <div class="developers p-4 border-b">
+                <button type="button" class="flex justify-between w-full mb-3">
+                    <span class="text-black">Developers</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>
+                <div class="flex flex-wrap space-x-2 space-y-1 items-center">
+                    <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>                          
+                        <span>Zillow</span>
+                    </a>
+                    <a href="#"  class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>                          
+                        <span>Trulia</span>
+                    </a>
+                    <a href="#"  class="flex justify-evenly items-center border border-neutral-500 bg-gray-300 px-4 space-x-2 rounded-full py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>                          
+                        <span>CBRE</span>
+                    </a>
+                </div>                
+
+            </div>
+            <!-- End Developers -->
+
+            <!-- Home Status -->
+            <div class="home-status p-4">
+                <button type="button" class="flex justify-between w-full mb-3">
+                    <span class="text-black">Home status</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>
+                <div class="flex flex-wrap space-x-2 space-y-1 items-center">
+                    <a href="#" class="flex justify-evenly items-center border-neutral-500 bg-gray-300 px-4 space-x-2 rounded-full py-2">
+                        <input type="radio" checked name="home-status" id="for-sale">                       
+                        <label for="for-sale" class="cursor-pointer">For sale</label>
+                    </a>
+                    <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                        <input type="radio" name="home-status" id="rent">                       
+                        <label for="rent" class="cursor-pointer">For rent</label>
+                    </a>
+                    <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                        <input type="radio" name="home-status" id="sold">                       
+                        <label for="sold" class="cursor-pointer">Sold</label>
+                    </a>
+                </div>
+            </div>
+            <!-- End Home Status -->
+
+            <!-- Budget -->
+            <div class="buget p-4 border-b-2">
+                <button type="button" class="flex justify-between w-full mb-3">
+                    <span class="text-black">Budget</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>
+
+                <div class="flex  justify-between">
+                    <span class="px-4 rounded-full border border-neutral-300">$211.800</span>
+                    <span class="px-4 rounded-full border border-neutral-300">$531.800</span>
+                </div>
+                <input type="range" min="20" max="800" value="200" name="Budget" id="budget" class="w-full my-2">
+            </div>
+            <!-- End Budget -->
+
+            <!-- End Home Type -->
+            <div class="home-type p-4 border-b-2">
+                
+                <div class="home-status p-">
+                    <button type="button" class="flex justify-between w-full mb-3">
+                        <span class="text-black">Home type</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </button>
+                    <div class="flex flex-wrap  space-y-1 items-center">
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="house">                       
+                            <label for="house" class="cursor-pointer">House</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="town-house">                       
+                            <label for="town-house" class="cursor-pointer">Town House</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="multi-family">                       
+                            <label for="multi-family" class="cursor-pointer">Multi-Family</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="land">                       
+                            <label for="land" class="cursor-pointer">Land</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="condos">                       
+                            <label for="condos" class="cursor-pointer">Condos</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="apartment">                       
+                            <label for="apartment" class="cursor-pointer">Apartment</label>
+                        </a>
+                        <a href="#" class="flex justify-evenly items-center border border-neutral-300 px-4 space-x-2 rounded-full py-2">
+                            <input type="radio" name="home-status" id="manufactured">                       
+                            <label for="manufactured" class="cursor-pointer">Manufactured</label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Home Type -->
+
+            <!-- Bedrooms -->
+            <div class="bedrooms p-4 border-b-2">
+                <button type="button" class="flex justify-between w-full mb-3">
+                    <span class="text-black">Bedrooms</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>                
+                <input type="range" min="1" max="6" value="4" name="bedrooms" id="bedrooms" class="w-full my-2">
+            </div>
+            <!-- End Bedrooms -->
+
+            <!-- Bathrooms -->
+            <div class="bathrooms p-4 border-b-2">
+                <button type="button" class="flex justify-between w-full mb-3">
+                    <span class="text-black">Bathrooms</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </button>
+                <input type="range" min="1" max="5" value="3" name="bathrooms" id="bathrooms" class="w-full my-2">
+            </div>
+            <!-- End Bathrooms -->
         </div>
     
-        <div class="content bg-cyan-500 col-span-12 lg:col-span-10 p-4">
+        <div class="content col-span-12 lg:col-span-10 p-4">
             
             <div id="map" class="h-96 w-full my-4 relative">
                 <img src="./assets/images/5.jpg" alt="location on map" class="w-full h-96 object-cover rounded-2xl">
@@ -104,7 +262,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute m-2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
-                        <input type="search" name="search-location" class="border-2 px-10 py-2 rounded-full outline-slate-400" placeholder="washingtown st. Haity">
+                        <input type="search" name="search-location" class="border-2 px-10 py-2 rounded-full outline-slate-400" placeholder="washington st. Haity">
                     </div>
 
                     <div id="location-icons" class="hidden my-4 md:flex flex-wrap items-center  space-x-3">
@@ -129,8 +287,132 @@
                     </div>
                 </div>
             </div>
-            <main class="bg-blue-500">
-                Home gallery
+            <main>
+                <h4 class="text-neutral-800 md:text-2xl">Washington St. Hayti - Homes for sale</h4>
+                <div class="flex justify-between">
+                    <p class="text-neutral-400">7 results</p>
+                    <button type="button" class="flex items-center justify-around space-x-1">
+                        <p><span class="font-semibold">Sort:</span> Homes for You</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>                          
+                    </button>
+                </div>
+                <div id="gallery" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-6">
+                    
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/1.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 548 Family House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$222.998</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/2.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 448 Town House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$252.998</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/9.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 338 Multi-Family
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$325.955</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/3.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 548 Family House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$222.998</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/7.jpg" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 548 Family House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$222.998</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/12.webp" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 548 Family House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$222.998</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="img w-full h-60 rounded-2xl relative">
+                            <img src="./assets/images/10.webp" alt="" class="w-full h-full object-cover rounded-lg">
+                            <p class="px-6 py-2 bg-slate-100 absolute bottom-1 m-3 rounded-full font-bold"><span class="text-green-800 font-semibold text-sm">CBRE</span> CBRE</p>
+                        </div>
+                        <div class="card-body my-4 flex justify-around">
+                            <a href="#" class="text-2xl md:text-4xl w-10/12 break-words">
+                                Washington. Hayti 548 Family House
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                          
+                        </div>
+                        <p class="text-base m-4">$222.998</p>
+                    </div>
+                    
+                </div>
             </main>
         </div>
     </div>
