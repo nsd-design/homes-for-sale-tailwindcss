@@ -417,23 +417,82 @@
         </div>
     </div>
     <!-- End Wraper -->
+    
+    <div class="divider border-t-2"></div>
 
-    <footer class="container mx-auto bg-fuchsia-950">
-        <div class="flex flex-wrap justify-between">
-            <div class="right md:w-6/12 bg-purple-500">
-                <div class="logo">Logo</div>
-                <div class="subscribe">newsletter</div>
+    <footer class="container mx-auto">
+        <div class="flex flex-wrap justify-between p-12">
+            <div class="right md:w-6/12">
+                <div id="logo" class="flex items-center space-x-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                    </svg>
+                    <h4 class="text-lg md:text-2xl font-bold">Keko Studio</h4>
+                </div>
+
+                <div class="subscribe mb-6">
+                    <h4 class="font-semibold text-lg">Subscribe</h4>
+                    <p class="text-neutral-400 text-sm md:text-base">Join our newsletter to stay up to date on features and releases.</p>
+                    <div class="newsletter-container w-full lg:w-8/12 relative flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute left-1 md:left-7">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                        </svg>                          
+                        <input type="email" name="newsletter" id="newsletter" class="w-full h-24 my-4 border border-neutral-400 ps-8 lg:ps-16 py-4 rounded-full" placeholder="Enter your email">
+                        <button type="button" class="absolute right-1 md:right-7 rounded-full bg-gray-800 px-4 py-2 text-slate-100 shadow-lg">
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="text-sm md:text-base text-neutral-400">By subscribing you agree to our <span class="font-semibold text-neutral-800">Privacy Policy</span></p>
+                </div>
             </div>
-            <div class="left flex flex-wrap bg-amber-700 justify-around md:w-6/12">
-                <div class="product">Product</div>
-                <div class="company">Company</div>
+            <div class="left w-full flex flex-wrap justify-around space-y-6 md:space-y-0 md:w-6/12">
+                <div class="product w-full md:w-6/12 space-y-4">
+                    <h3 class="font-semibold text-xl tracking-wide">Product</h3>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#">All Interior Assistant</a></li>
+                        <li><a href="#">Collection</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="company w-full md:w-6/12 space-y-4">
+                    <h3 class="font-semibold text-xl tracking-wide">Company</h3>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        
-        <div class="copy-social flex flex-wrap justify-between">
-            <p class="bg-cyan-500">&copy;</p>
-            <div class="social-networks bg-lime-500">
-                social networks
+        <div class="divider border-b-2"></div>
+        <div class="copy-social flex my-8 flex-wrap justify-between">
+            <p class="font-semibold">&copy; 2024 NSD_DESIGN. All right reserved.</p>
+            <div class="social-networks ">
+                <ul class="flex space-x-4">
+                    <li class="bg-black w-8 h-8 p-2 rounded-lg hover:bg-red-500 cursor-pointer transition ease-out">
+                        <a href="https://www.instagram.com/nsd_design0/" target="_blank">
+                            <img src="./assets/images/instagram (1).png" alt="instagram profile">
+                        </a>
+                    </li>
+                    <li class="bg-black w-8 h-8 p-2 rounded-lg hover:bg-blue-400 cursor-pointer transition ease-out">
+                        <a href="https://twitter.com/ibayo427" target="_blank">
+                            <img src="./assets/images/twitter (1).png" alt="twitter profile">
+                        </a>
+                    </li>
+                    <li class="bg-black w-8 h-8 p-2 rounded-lg hover:bg-blue-500 cursor-pointer transition ease-out">
+                        <a href="https://www.facebook.com/ibrahima.bayo.12" target="_blank">
+                            <img src="./assets/images/facebook.png" alt="facebook profile">
+                        </a>
+                    </li>
+                    <li class="bg-black w-8 h-8 p-2 rounded-lg hover:bg-blue-400 cursor-pointer transition ease-out">
+                        <a href="www.linkedin.com/in/ibrahima-bayo-88312a1b4" target="_blank">
+                            <img src="./assets/images/linkedin (1).png" alt="linkedin profile">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>
